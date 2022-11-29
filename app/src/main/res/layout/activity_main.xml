@@ -90,6 +90,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/operations_button_background"
+        android:contentDescription="backspace"
         android:cropToPadding="false"
         android:gravity="center"
         android:scaleType="centerInside"
@@ -98,7 +99,6 @@
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline3"
-
         app:srcCompat="@drawable/ic_backspace" />
 
     <!-- Row 2 -->
@@ -153,6 +153,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/operations_button_background"
+        android:contentDescription="multiply"
         android:gravity="center"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@id/subtract"
@@ -213,6 +214,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/operations_button_background"
+        android:contentDescription="subtract"
         android:gravity="center"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@id/add"
@@ -273,6 +275,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/operations_button_background"
+        android:contentDescription="add"
         android:gravity="center"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@id/equals"
