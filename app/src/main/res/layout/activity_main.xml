@@ -7,12 +7,341 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:lines="10"
+        app:layout_constraintBottom_toTopOf="@id/clearAll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <!-- Row 1 -->
+
+    <TextView
+        android:id="@+id/clearAll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operations_button_background"
+        android:gravity="center"
+        android:text="C"
+        android:textColor="@color/operations_foreground"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/number7"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operations_button_background"
+        android:gravity="center"
+        android:text="%"
+        android:textColor="@color/operations_foreground"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/number8"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1" />
+
+    <TextView
+        android:id="@+id/divide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operations_button_background"
+        android:gravity="center"
+        android:text="÷"
+        android:textColor="@color/operations_foreground"
+        android:textSize="32sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@id/number9"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toEndOf="@id/guideline2" />
+
+
+    <ImageButton
+        android:id="@+id/clear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operations_button_background"
+        android:cropToPadding="false"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@id/multiply"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+
+        app:srcCompat="@drawable/ic_backspace" />
+
+    <!-- Row 2 -->
+
+    <TextView
+        android:id="@+id/number7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="7"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/number4"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/number8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="8"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/number5"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1" />
+
+
+    <TextView
+        android:id="@+id/number9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="9"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/number6"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toEndOf="@id/guideline2" />
+
+
+    <ImageButton
+        android:id="@+id/multiply"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operations_button_background"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/subtract"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:srcCompat="@drawable/ic_multiply" />
+
+    <!--  Row 3  -->
+
+    <TextView
+        android:id="@+id/number4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="4"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/number1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/number5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/number2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1" />
+
+
+    <TextView
+        android:id="@+id/number6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="6"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/number3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toEndOf="@id/guideline2" />
+
+
+    <ImageButton
+        android:id="@+id/subtract"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operations_button_background"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/add"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:srcCompat="@drawable/ic_minus" />
+
+    <!--  Row 4  -->
+
+    <TextView
+        android:id="@+id/number1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/blank"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/number2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/number0"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1" />
+
+
+    <TextView
+        android:id="@+id/number3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/decimal"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toEndOf="@id/guideline2" />
+
+
+    <ImageButton
+        android:id="@+id/add"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operations_button_background"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/equals"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+
+        app:srcCompat="@drawable/ic_add" />
+
+
+    <!--  Row 5  -->
+
+    <TextView
+        android:id="@+id/blank"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operations_button_background"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/number0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/numbers_button_background"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1" />
+
+
+    <TextView
+        android:id="@+id/decimal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operations_button_background"
+        android:gravity="center"
+        android:text="."
+        android:textColor="@color/operations_foreground"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toEndOf="@id/guideline2" />
+
+
+    <TextView
+        android:id="@+id/equals"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/equals_button_background"
+        android:gravity="center"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
